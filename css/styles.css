@@ -1,18 +1,158 @@
-/* styles.css */
+/*
+importa la fuente
+Resetea
+haz un root
+ */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+:root {
+  --color-background: #000000;
+	--color-primary: #e50914;
+	--color-secondary: #171717;
+	--color-text: #ffffff;
+	--color-link-hover: var(--color-text);
+  --color-brightness: #0000009e;
+  --color-scrollbar: #888;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-bold: 700;
+}
+
+/*reseteo*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-  font-family: Arial, sans-serif;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*fin de reseteo*/
+
+body {
+  background-color: var(--color-background);
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: var(--font-normal);
+  color: var(--color-text);
+}
+
+h1 {
+  color: var(--color-primary);
+  margin: 20px;
+  padding: 15px;
+  font-weight: var(--font-bold);
+  font-size: 55px;
+  text-shadow: var(--color-primary) 1px 1px 5px;
 }
 
 .genero-container {
   margin: 20px;
   padding: 20px;
   border: 1px solid #ccc;
-  background-color: #f8f8f8;
+  background-color: var(--color-background);
+  border: none;
 }
 
 h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  font-weight: var(--font-normal);
 }
 
+.genero-container div {
+  display: flex;
+  text-align: center;
+  list-style: none;
+}
 
+.genero {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 10px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  scrollbar-color: var(--color-scrollbar) transparent;
+  width: 100%;
+}
+
+.genero ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+li {
+  margin: 10px;
+  padding: 10px;
+  background-color: var(--color-secondary);
+  transition: all .5s ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+li:hover {
+  transform: scale(1.05);
+}
+
+li img {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px;
+}
+
+@media (max-width: 740px) {
+  .masthead article {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+  }
+  .display-none {
+    display: none;
+  }
+}
