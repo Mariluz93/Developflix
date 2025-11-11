@@ -1,8 +1,3 @@
-/*
-importa la fuente
-Resetea
-haz un root
- */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 :root {
   --color-background: #000000;
@@ -17,7 +12,7 @@ haz un root
   --font-bold: 700;
 }
 
-/*reseteo*/
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -95,14 +90,14 @@ h2 {
   font-weight: var(--font-normal);
 }
 
-.genero-container div {
-  display: flex;
-  text-align: center;
-  list-style: none;
+h3 {
+  margin-top: 20px;
+  max-width: 200px;
 }
 
 .genero {
   display: flex;
+  text-align: center;
   overflow-x: auto;
   overflow-y: hidden;
   gap: 10px;
@@ -112,13 +107,7 @@ h2 {
   width: 100%;
 }
 
-.genero ul {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 10px;
-}
-
-li {
+.card {
   margin: 10px;
   padding: 10px;
   background-color: var(--color-secondary);
@@ -127,22 +116,23 @@ li {
   border-radius: 5px;
 }
 
-li:hover {
+.card:hover {
   transform: scale(1.05);
 }
 
-li img {
+.card img {
   width: 200px;
   height: 300px;
+  margin: 5px;
   margin-bottom: 10px;
 }
 
-p {
+.card p{
   margin: 10px;
 }
 
 @media (max-width: 740px) {
-  .masthead article {
+  .genero-container {
     display: flex;
     flex-direction: column;
     justify-content: end;
