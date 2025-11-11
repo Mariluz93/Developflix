@@ -1,6 +1,6 @@
 import peliculas from './peliculas.js'
 
-const generos = document.querySelectorAll('.genero');
+//const generos = document.querySelectorAll('.genero');
 
 const accion = document.getElementById('genero-28');
 const thriller = document.getElementById('genero-53');
